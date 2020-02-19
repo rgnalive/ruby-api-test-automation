@@ -19,7 +19,7 @@ Quando eu realizar um get no endpoint cards buscando pelo name "nissa"
 Então devo visualizar somente Cards com o name "nissa"
 E devo receber o status_code 200
 
-@name @only
+@name @notrun
 Cenário: Consultar cards utilizando mais de um name na mesma querystring
 Quando eu realizar um get no endpoint cards buscando pelos names "nissa" e "jace" separados por vírgula
 Então devo visualizar somente Cards que possuam os names "nissa" ou "jace"

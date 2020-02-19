@@ -26,7 +26,7 @@ Então("devo visualizar somente Cards com o name {string}") do |string|
 end
 
 Quando("eu realizar um get no endpoint cards buscando pelos names {string} e {string} separados por vírgula") do |string, string2|
-  $response = @cards_endpoint.getCards({ name: string, name: string2 })
+  $response = @cards_endpoint.getCards( "name=string,string2" )
 end
 
 Então("devo visualizar somente Cards que possuam os names {string} ou {string}") do |string, string2|
