@@ -3,11 +3,12 @@ require "httparty"
 
 #Configurações de ambiente
 case ENV["env"]
-when "uat"
-  puts "Iniciando execução em ambiente de UAT"
-  ENV["base_uri"] = "http://api.magicthegathering.io/v1/"
+when "stage"
+  puts "Iniciando execução em ambiente de STAGE"
+  ENV["base_uri"] = "https://reqres.in/"
 when "dev"
   puts "Iniciando execução em ambiente de DEV"
 else "local"
-puts "Iniciando execução em ambiente LOCAL"
+  puts "Iniciando execução em ambiente default: STAGE"
+  ENV["base_uri"] = "https://reqres.in/"
 end
