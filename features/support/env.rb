@@ -1,7 +1,7 @@
 require "cucumber"
 require "httparty"
 
-#Configurações de ambiente
+#Environment
 case ENV["env"]
 when "stage"
   puts "Iniciando execução em ambiente de STAGE"

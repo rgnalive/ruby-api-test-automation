@@ -26,10 +26,10 @@ Cenário: Listar todos os users existentes na primeira página com delay de 3 se
     Então eu recebo os users existentes depois de 3 segundos
     E recebo o status 200
 
-
+###################
 
 @users @single
-Funcionalidade: Get Single User
+Funcionalidade: Get single User
     Como um usuário do sistema
     Eu quero poder buscar um user específico
     A fim de viualizá-lo
