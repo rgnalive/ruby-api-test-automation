@@ -1,4 +1,5 @@
 #language: pt
+#encoding: utf-8
 
 @users @create
 Funcionalidade: Create User
@@ -13,7 +14,6 @@ Cenário: Cadastrar um user com sucesso
     E as informações cadastradas do user foram persistidas na base de dados
     E recebo o status 201
 
-###################
 
 @users @update
 Funcionalidade: Update User
@@ -35,7 +35,6 @@ Cenário: Falha ao tentar alterar um user inexistente
     Quando eu requisitar a alteração de user informando um id inexistente
     Então recebo o status 404
 
-###################
 
 @users @delete
 Funcionalidade: Delete User
