@@ -1,14 +1,24 @@
 require "cucumber"
 require "httparty"
+require "faker"
+require "date"
 
-#Environment
+
+
+
+
+#Environment Conditional
 case ENV["env"]
+
 when "stage"
-  puts "Iniciando execução em ambiente de STAGE"
-  ENV["base_uri"] = "https://reqres.in/"
+  puts "Beginning automation test in Stage's environment"
+  ENV["base_uri"] = "https://reqres.in/api"
+
 when "dev"
-  puts "Iniciando execução em ambiente de DEV"
-else "local"
-  puts "Iniciando execução em ambiente default: STAGE"
-  ENV["base_uri"] = "https://reqres.in/"
+  puts "Beginning automation test in Developer's environment"
+
+else 
+  puts "Beginning automation test in default's environment: Stage"
+  ENV["base_uri"] = "https://reqres.in/api"
+
 end
