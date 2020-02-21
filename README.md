@@ -1,2 +1,4 @@
 # ruby-test-automation
-E2E and Backend test automation project in Ruby, Cucumber, Capybara, Site_Prism and Httparty.
+An API automation test project in Ruby and HTTParty. I'm "testing" the ReqRes API just for an example. 
+
+If you want to know more about ReqRes API, visit http://reqres.in
