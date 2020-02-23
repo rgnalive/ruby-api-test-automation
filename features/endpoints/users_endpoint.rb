@@ -2,21 +2,23 @@ class UsersEndpoint
   include HTTParty
   $base_uri = "#{ENV["base_uri"]}/users"
 
-  # Obs: these ReqRes endpoints don't have any security auth. We know it's unsafe...
-
-  def createUser(params)
-    self.class.post($base_uri, :body => params)
+  def createUser(body)
+    self.class.post($base_uri, :body => body)
   end
 
-  def updateUser(params)
+  def updateUser(user_id, body)
+    self.class.put("#{$base_uri}/#{user_id}", :body => body)
   end
 
-  def deleteUser(params)
+  def deleteUser(user_id)
+    self.class.delete("#{$base_uri}/#{user_id}")
   end
 
-  def findUsers(params)
+  def getUser(user_id)
+    self.class.get("#{$base_uri}/#{user_id}")
   end
 
-  def getUser(params)
+  def findUsers(query)
+    self.class.get($base_uri, :query => query)
   end
 end

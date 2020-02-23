@@ -1,5 +1,4 @@
 #language: pt
-#encoding: utf-8
 
 @users @update
 Funcionalidade: Update User
@@ -7,6 +6,7 @@ Funcionalidade: Update User
     Eu quero poder alterar um user
     A fim de alterar users já cadastrados
 
+@success
 Cenário: Alterar um user com sucesso
     Dado o endpoint da API para alterar users
     Quando eu requisitar a alteração de user informando um id existente
