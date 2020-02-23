@@ -18,4 +18,4 @@ Cenário: Buscar um user inexistente
     Dado o endpoint da API para buscar um user específico
     Quando eu buscar um user por id inexistente
     Então eu recebo uma lista vazia
-    E recebo o status 200
+    E recebo o status 404

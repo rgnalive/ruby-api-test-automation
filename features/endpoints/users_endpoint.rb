@@ -18,7 +18,7 @@ class UsersEndpoint
     self.class.get("#{$base_uri}/#{user_id}")
   end
 
-  def findUsers(query)
+  def listUsers(query)
     self.class.get($base_uri, :query => query)
   end
 end

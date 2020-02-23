@@ -21,26 +21,24 @@ Então("eu recebo os dados do user de volta com o id gerado e data e hora da cri
 end
 
 Então("as informações cadastradas do user foram persistidas na base de dados") do
-  # Infelizmente não possuo acesso à base de dados da API ReqRes
-  # Mas, para simularmos uma validação de banco de dados, usamos o código comentado abaixo (Ele não funcionará se descomentar)
-
-  # @users_table = UsersTable.new
-
+  # Com validação de banco de dados:
   # $query = @users_table.getUserById($response["id"])
-  # expect($query["name"])to eq($payload[:name])
-  # expect($query["job"])to eq($payload[:name])
+  # expect($query[rows][0]["name"])to eq($payload[:name])
+  # expect($query[rows][0]["job"])to eq($payload[:name])
 end
 
 Quando("eu requisitar o cadastro de user com um name já existente") do
-  $payload = {
-    "name": Faker::Name.name,
-    "job": Faker::Job.title,
-  }
+  puts "A API validada não possui essa feature. Criei o teste apenas para simular"
+  # $payload = {
+  #   "name": Faker::Name.name,
+  #   "job": Faker::Job.title,
+  # }
 
-  @users_endpoint.createUser($payload)
-  $response = @users_endpoint.createUser($payload)
+  # @users_endpoint.createUser($payload)
+  # $response = @users_endpoint.createUser($payload)
 end
 
 Então("eu recebo a mensagem User already exists.") do
-  expect($response["message"]).to eq("User already exists.")
+  puts "A API validada não possui essa feature. Criei o teste apenas para simular"
+  # expect($response["message"]).to eq("User already exists.")
 end
