@@ -1,4 +1,4 @@
-#language: pt
+# language: pt
 
 @users @list
 Funcionalidade: List Users
@@ -10,17 +10,17 @@ Funcionalidade: List Users
 Cenário: Listar todos os users existentes na primeira página
     Dado o endpoint da API para listar users
     Quando eu listar users sem especificar nenhum parâmetro
-    Então eu recebo os users existentes na primeira página com um limite de 5 users por página
+    Então eu recebo os users existentes na página 1 com um limite de 6 users por página
     E recebo o status 200
 
-@success @pagination 
+@success @page
 Cenário: Listar todos os users existentes na segunda página
     Dado o endpoint da API para listar users
     Quando eu listar users passando o parâmetro page igual a 2
-    Então eu recebo os users existentes na segunda página com um limite de 5 users por página
+    Então eu recebo os users existentes na página 2 com um limite de 6 users por página
     E recebo o status 200
 
-@success @delay @only
+@success @delay
 Cenário: Listar todos os users existentes na primeira página com delay de 3 segundos
     Dado o endpoint da API para listar users
     Quando eu listar users passando o parâmetro delay igual a 3

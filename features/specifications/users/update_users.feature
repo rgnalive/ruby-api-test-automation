@@ -14,7 +14,7 @@ Cenário: Alterar um user com sucesso
     E as informações alteradas do user foram persistidas na base de dados
     E recebo o status 200
 
-@error
+@error @notrun
 Cenário: Falha ao tentar alterar um user inexistente
     Dado o endpoint da API para alterar users
     Quando eu requisitar a alteração de user informando um id inexistente
