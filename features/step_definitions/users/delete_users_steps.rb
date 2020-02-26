@@ -3,12 +3,12 @@ Dado("o endpoint da API para excluir users") do
 end
 
 Quando("eu requisitar a exclusão de user informando um id existente") do
-  $response = @users_endpoint.deleteUser("1")
+  $response_delete_user = @users_endpoint.deleteUser("1")
 
   # Com consulta na base de dados:
   # @users_table = UsersTable.new
   # $query = @users_table.getLastUser()
-  # $response = @users_endpoint.deleteUser($query[rows][0]["id"])
+  # $response_delete_user = @users_endpoint.deleteUser($query[rows][0]["id"])
 end
 
 Então("as informações do user foram removidas da base de dados") do
@@ -19,10 +19,10 @@ Então("as informações do user foram removidas da base de dados") do
 end
 
 Quando("eu requisitar a exclusão de user informando um id inexistente") do
-  $response = @users_endpoint.deleteUser("99")
+  $response_delete_user = @users_endpoint.deleteUser("99")
 
   # Com consulta na base de dados:
   # @users_table = UsersTable.new
   # $query = @users_table.getLastUser()
-  # $response = @users_endpoint.deleteUser($query[rows][0]["id"] + 1)
+  # $response_delete_user = @users_endpoint.deleteUser($query[rows][0]["id"] + 1)
 end

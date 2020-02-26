@@ -1,6 +1,6 @@
 class UsersEndpoint
   include HTTParty
-  $base_uri = "#{ENV["base_uri"]}/users"
+  $base_uri = "#{ENV["api_url"]}/users"
 
   def createUser(body)
     self.class.post($base_uri, :body => body)
